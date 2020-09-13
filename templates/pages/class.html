@@ -1,0 +1,29 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 {
+  width: 100%;
+  background-color: #f1f1c1;
+}
+</style>
+
+<div class="container">
+    <center><h1>Avaible class for you</h1></center>
+    <center>
+    <table>
+        <tr><th>Course ID<th><th>Course name<th><th>Term<th><th>Years</th><th>Status</th><th>Seat left</th></tr>
+        {% for c1 in class_info %}
+            <tr><td> {{c1.idsubject}} </td><td> {{c1.subject}}</td><td> {{c1.term}}</td><td> {{c1.year}} </td><td>{{c1.status}}</td><td><center>{{c1.seat}}</center></td></tr>
+        {% endfor %}
+    </table>
+    </center>
+</div>
+ {% endblock content %}

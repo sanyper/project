@@ -1,0 +1,20 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+
+<div class="container">
+    <center>
+    <table style="width:100%">
+        <tr>
+          <th></th></th><th>id</th><th>subject</th><th>term</th><th>year</th><th>seat</th><th>status</th>
+        </tr>
+        {% for sj in subj  %}
+        <tr>
+          <td><input type="submit" value="ลงทะเบียน"></td></td><td>{{sj.idsubject}}</td><td>{{sj.subject}}</td><td>{{sj.term}}</td><td>{{sj.year}}</td><td>{{sj.seat}}</td><td>{{sj.status}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    </center>
+</div>
+
+ {% endblock content %}
